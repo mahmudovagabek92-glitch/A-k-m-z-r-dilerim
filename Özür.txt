@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Özür Dilerim ❤️</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        .card {
+            background: white;
+            padding: 40px;
+            border-radius: 16px;
+            max-width: 500px;
+            text-align: center;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+        }
+
+        h1 {
+            color: #e63946;
+            margin-bottom: 20px;
+        }
+
+        p {
+            color: #333;
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        .heart {
+            font-size: 40px;
+            margin: 20px 0;
+            animation: pulse 1.5s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+            100% { transform: scale(1); }
+        }
+
+        button {
+            margin-top: 25px;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 25px;
+            background: #e63946;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background: #c1121f;
+        }
+    </style>
+</head>
+<body>
+
+<div class="card">
+    <h1>Özür Dilerim</h1>
+    <div class="heart">❤️</div>
+    <p>
+        Seni kırdıysam, üzdüysem gerçekten çok üzgünüm.  
+        Kalbimdeki yerin çok özel ve seni kaybetmek istemiyorum.  
+        Lütfen beni affet.
+    </p>
+    <button onclick="alert('Seni çok seviyorum ❤️')">Beni Affeder misin?</button>
+</div>
+
+</body>
+</html>
