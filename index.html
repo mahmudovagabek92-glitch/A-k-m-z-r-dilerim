@@ -1,38 +1,118 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-  <meta charset="UTF-8">
-  <title>Özür Dilerim</title>
-  <style>
-    body {
-      margin: 0;
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background: linear-gradient(135deg, #ff9a9e, #fad0c4);
-      font-family: Arial, sans-serif;
-    }
-    .box {
-      background: white;
-      padding: 30px;
-      border-radius: 15px;
-      text-align: center;
-      max-width: 400px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-    }
-    h1 { color: #e63946; }
-    p { font-size: 18px; }
-  </style>
+<meta charset="UTF-8">
+<title>Bir Kalpten Diğerine</title>
+
+<style>
+body {
+  margin: 0;
+  height: 100vh;
+  background: linear-gradient(135deg, #ff758c, #ff7eb3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Segoe UI', sans-serif;
+  overflow: hidden;
+}
+
+.container {
+  background: rgba(255,255,255,0.95);
+  padding: 40px;
+  border-radius: 20px;
+  max-width: 420px;
+  text-align: center;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+  animation: fadeIn 2s ease;
+}
+
+h1 {
+  color: #e63946;
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 18px;
+  line-height: 1.7;
+  color: #333;
+  opacity: 0;
+  animation: textAppear 2s forwards;
+}
+
+p:nth-child(2){animation-delay:1s}
+p:nth-child(3){animation-delay:2.5s}
+p:nth-child(4){animation-delay:4s}
+
+.heart {
+  font-size: 50px;
+  cursor: pointer;
+  margin-top: 25px;
+  animation: pulse 1.5s infinite;
+}
+
+.music-btn {
+  margin-top: 20px;
+  padding: 12px 25px;
+  border-radius: 30px;
+  border: none;
+  background: #e63946;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+@keyframes fadeIn {
+  from {transform: scale(0.9); opacity:0}
+  to {transform: scale(1); opacity:1}
+}
+
+@keyframes pulse {
+  0% {transform: scale(1)}
+  50% {transform: scale(1.2)}
+  100% {transform: scale(1)}
+}
+
+@keyframes textAppear {
+  to {opacity:1}
+}
+</style>
 </head>
+
 <body>
-  <div class="box">
-    <h1>Özür Dilerim ❤️</h1>
-    <p>
-      Seni üzdüysem gerçekten çok üzgünüm.  
-      Kalbimdeki yerin çok özel.  
-      Lütfen beni affet.
-    </p>
-  </div>
+
+<audio id="music" loop>
+  <source src="https://cdn.pixabay.com/audio/2022/03/15/audio_4c1a5f6a5f.mp3" type="audio/mpeg">
+</audio>
+
+<div class="container">
+  <h1>Minik Kuşum 🤍</h1>
+
+  <p>Birgülüm…</p>
+  <p>
+    Kalbimin en güzel yerinde sen varsın.  
+    Harikam, bazen kelimeler yetmiyor ama bil ki  
+    seni her geçen gün daha derinden hissediyorum.
+  </p>
+
+  <p>
+    Bir tanem, bu satırlar sadece bir özür değil…  
+    Bu, sana olan sevgimin sessiz ama en gerçek hali.
+  </p>
+
+  <button class="music-btn" onclick="playMusic()">🎵 Müziği Başlat</button>
+
+  <div class="heart" onclick="showMessage()">❤️</div>
+</div>
+
+<script>
+function playMusic(){
+  document.getElementById("music").play();
+}
+
+function showMessage(){
+  alert("Seni çok seviyorum… Her şeyden çok 🤍");
+}
+</script>
+
 </body>
 </html>
